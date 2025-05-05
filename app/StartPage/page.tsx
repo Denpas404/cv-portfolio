@@ -24,26 +24,24 @@ export default function StartPage() {
     }, []);
 
     return (
-        <div className="flex flex-col min-h-screen bg-gray-300 text-gray-900 ">
+        <div className="flex flex-col bg-gray-300 text-gray-900 bg-[url('/bg_bg3.svg')]">
             <Navbar setActiveTab={setActiveTab} />
 
             {/* Main wrapper */}
-            <div className="flex flex-col items-center w-full p-1 mt-12 relative">
+            <div className="flex flex-col items-center w-full p-1 mt-6 mb-3 relative ">
 
-                {/* New parent div (column, aligned to the right) */}
+                {/* Right-aligned column container */}
                 <div className="flex flex-col items-end relative max-w-6xl w-full">
-
-                    {/* Tab Container aligned seamlessly (No Gap) */}
+                    
+                    {/* Tabs and edge graphic container */}
                     <div className="flex flex-row items-stretch justify-end">
-                        <img
-                            src="/nav-edge.svg"
-                            alt="Tab Edge"
-                            className="w-auto block translate-x-0.5"
-                            style={{ height: `${tabHeight + 25}px` }}
+                        {/* Decorative SVG aligned to the left of the tab bar, matching its height */}
+                        <img src="/nav-edge.svg" alt="Tab Edge" className="w-auto block translate-x-0.5" style={{ height: `${tabHeight + 25}px` }}
                         />
 
+                        {/* Tab navigation container – height is tracked via ref */}
                         <div ref={tabContainerRef} className="bg-white px-8 rounded-tr-4xl flex items-center">
-                            <TabsNavigation activeTab={activeTab} setActiveTab={setActiveTab}/>
+                            <TabsNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
                         </div>
                     </div>
 
