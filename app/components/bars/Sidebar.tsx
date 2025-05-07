@@ -1,20 +1,48 @@
 interface SidebarProps {
     setActiveTab: (tab: string) => void;
+    color: string;
 }
 
-export default function Sidebar({ setActiveTab }: SidebarProps) {
+export default function Sidebar({ setActiveTab, color }: SidebarProps) {
     return (
-        <aside className="w-full bg-gray-200 p-6 rounded-l-lg text-center">
-            <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto mb-5 w-[12ch] h-[12ch]" viewBox="0 0 24 24">
-                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7.753 18.305c-.261-.586-.789-.991-1.871-1.241-2.293-.529-4.428-.993-3.393-2.945 3.145-5.942.833-9.119-2.489-9.119-3.388 0-5.644 3.299-2.489 9.119 1.066 1.964-1.148 2.427-3.393 2.945-1.084.25-1.608.658-1.867 1.246-1.405-1.723-2.251-3.919-2.251-6.31 0-5.514 4.486-10 10-10s10 4.486 10 10c0 2.389-.845 4.583-2.247 6.305z"></path>
+        <aside className="w-full bg-[var(--sidebar)] p-6 rounded-l-lg text-center">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                className="mx-auto mb-5 w-[18ch] h-[18ch] rounded-full border-5 opacity-80 shadow-xl"
+                style={{ borderColor: color }}
+            >
+                <circle cx="64" cy="64" r="64" fill="transparent" stroke="black" strokeWidth="6" />
+                <circle cx="64" cy="48" r="20" fill="black" />
+                <path d="M32 104c0-18 64-18 64 0" fill="black" />
             </svg>
-            <h1 className="text-xl font-bold text-green-600 text-center">Dennis Paaske</h1>
+
+            <h1 className="text-xl font-bold text-center" style={{ color }}>
+                Dennis Paaske
+            </h1>
             <p className="text-gray-700 mt-2">Datatekniker elev med speciale i programmering</p>
 
+            {/* Contact Links */}
             <div className="mt-6">
-                <h2 className="text-lg font-semibold border-b border-green-500 pb-2">Kontakt</h2>
-                <p>🔗 <a href="https://github.com/Denpas404" className="text-green-600 hover:underline">github.com/Denpas404</a></p>
-                <p>🌐 denpas404.github.io</p>
+                <h2 className="text-lg font-semibold border-b pb-2" style={{ borderColor: color, borderBottomWidth: '2px' }}>
+                    Kontakt
+                </h2>
+                <div className="mt-4 grid gap-3 justify-center">
+                    <div className="grid grid-cols-[1.5rem_auto] gap-3 items-center">
+                        <div className="flex justify-center items-center">
+                            <svg className="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.263.793-.582v-2.234c-3.338.726-4.033-1.61-4.033-1.61-.546-1.386-1.333-1.755-1.333-1.755-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.776.42-1.306.762-1.606-2.665-.304-5.466-1.334-5.466-5.93 0-1.31.468-2.382 1.235-3.22-.124-.304-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404c1.02.004 2.047.137 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.12 3.176.77.838 1.233 1.91 1.233 3.22 0 4.61-2.805 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.192.698.8.58C20.565 21.796 24 17.297 24 12c0-6.63-5.373-12-12-12z" />
+                            </svg>
+                        </div>
+                        <a href="https://github.com/Denpas404" className="hover:underline text-left pointer-events-auto" style={{ color }}>
+                            github.com/Denpas404
+                        </a>
+                    </div>
+                    <div className="grid grid-cols-[1.5rem_auto] gap-3 items-center">
+                        <div className="flex justify-center items-center text-xl">🌐</div>
+                        <a href="https://denpas404.github.io/" className="hover:underline text-left pointer-events-auto" style={{ color }}>denpas404.github.io</a>
+                    </div>
+                </div>
             </div>
         </aside>
     );
