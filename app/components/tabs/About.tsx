@@ -7,11 +7,11 @@ export default function About() {
     return (
         <section>
             {/* Om mig */}
-            <h2 className="text-2xl font-bold text-[#d97706] border-b border-[#d97706] pb-2">Om mig</h2>
+            <h2 className="text-2xl font-bold text-[var(--about)] border-b border-[var(--about)] pb-2">Om mig</h2>
 
             <div className="space-y-6 mt-4">
                 <div className="bg-gray-50 border border-gray-200 rounded-md p-4 space-y-4">
-                    <h3 className="text-xl font-semibold text-[#d97706] mb-2">Baggrund & Motivation</h3>
+                    <h3 className="text-xl font-semibold text-[var(--about)] mb-2">Baggrund & Motivation</h3>
                     <p>
                         Jeg er i gang med at uddanne mig som datatekniker med speciale i programmering og har allerede opnået solid erfaring med softwareudvikling, databaser og IT-infrastruktur gennem både skoleforløb og praktik.
                     </p>
@@ -28,7 +28,7 @@ export default function About() {
 
                 {/* Hvad har jeg arbejdet med gennem uddannelsen? */}
                 <div>
-                    <h3 className="text-xl font-semibold text-[#d97706] mb-2">Hvad har jeg arbejdet med gennem uddannelsen?</h3>
+                    <h3 className="text-xl font-semibold text-[var(--about)] mb-2">Hvad har jeg arbejdet med gennem uddannelsen?</h3>
                     <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
                         {skills.map((skill, index) => (
                             <div

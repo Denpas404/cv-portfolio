@@ -21,13 +21,13 @@ const tabData = [
 
 const getColorByTab = (color: string) => {
     switch (color) {
-      case "cyan": return "#0891b2";     // mørkere end #06b6d4
-        case "blue": return "#2563eb";     // mørkere end #3b82f6
-        case "violet": return "#6d28d9";   // lidt dybere end #7c3aed
-        case "rose": return "#e11d48";     // mere mættet end #f43f5e
-        case "amber": return "#d97706";    // mindre neon, mere læsbar
-        case "indigo": return "#4f46e5";   // justeret fra #6366f1
-        default: return "#2563eb";
+        case "cyan": return "var(--education)";
+        case "blue": return "var(--skills)";
+        case "violet": return "var(--experience)";
+        case "rose": return "var(--volunteer)";
+        case "amber": return "var(--about)";
+        case "indigo": return "var(--portfolio)";
+        default: return "var(--skills)";;
     }
 };
 
@@ -55,7 +55,7 @@ export default function StartPage() {
 
                 {/* Right-aligned column container */}
                 <div className="flex flex-col items-end relative max-w-6xl w-full ">
-                    
+
                     {/* Tabs and edge graphic container */}
                     <div className="flex flex-row items-stretch justify-end">
                         {/* Decorative SVG aligned to the left of the tab bar, matching its height */}

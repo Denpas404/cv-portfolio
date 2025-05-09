@@ -21,13 +21,13 @@ const tabData = [
 // Color hex codes
 const getColorByTab = (color: string) => {
     switch (color) {
-        case "cyan": return "#06b6d4";
-        case "blue": return "#3b82f6";
-        case "violet": return "#7c3aed";
-        case "rose": return "#f43f5e";
-        case "amber": return "#f59e0b";
-        case "indigo": return "#6366f1";
-        default: return "#3b82f6";
+        case "cyan": return "var(--education)";
+        case "blue": return "var(--skills)";
+        case "violet": return "var(--experience)";
+        case "rose": return "var(--volunteer)";
+        case "amber": return "var(--about)";
+        case "indigo": return "var(--portfolio)";
+        default: return "var(--skills)";;
     }
 };
 
@@ -61,7 +61,7 @@ const TabsNavigation: React.FC<TabsNavigationProps> = ({ activeTab, setActiveTab
                             value={tab.value}
                             onClick={() => setActiveTab(tab.value)}
                             ref={(el) => { tabsRef.current[index] = el; }}
-                            className="relative px-1 py-2 text-gray-500 font-semibold transition-all duration-300 hover:opacity-80 data-[state=active]:opacity-100"
+                            className="relative px-1 py-2 text-gray-500 font-semibold transition-all duration-300 hover:opacity-80 data-[state=active]:opacity-100 cursor-pointer"
                             style={{
                                 color: activeTab === tab.value ? getColorByTab(tab.color) : undefined,
                                 textShadow: activeTab === tab.value

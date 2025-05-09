@@ -1,11 +1,11 @@
 export default function Volunteer() {
     return (
         <section>
-            <h2 className="text-2xl font-bold text-[#e11d48] border-b border-[#e11d48] pb-2">Fritid & Frivilligt Arbejde</h2>
+            <h2 className="text-2xl font-bold text-[var(--volunteer)] border-b border-[var(--volunteer)] pb-2">Fritid & Frivilligt Arbejde</h2>
 
             <div className="space-y-6 mt-4">
                 <div className="bg-gray-50 border border-gray-200 rounded-md p-4">
-                    <h3 className="font-semibold text-[#e11d48] mb-2">Ro og fornyet fokus</h3>
+                    <h3 className="font-semibold text-[var(--volunteer)] mb-2">Ro og fornyet fokus</h3>
                     <p className="text-sm text-gray-700">
                         Jeg prioriterer tid med familien og værdsætter balance i hverdagen.
 
@@ -14,7 +14,7 @@ export default function Volunteer() {
                 </div>
 
                 <div className="bg-gray-50 border border-gray-200 rounded-md p-4">
-                    <h3 className="font-semibold text-[#e11d48] mb-2">Frivilligt engagement</h3>
+                    <h3 className="font-semibold text-[var(--volunteer)] mb-2">Frivilligt engagement</h3>
                     <p className="text-sm text-gray-700 mb-3">
                         Tidligere har jeg engageret mig som bestyrelsesmedlem i min andelsboligforening gennem to perioder. Her deltog jeg aktivt i beslutningsprocesser, samarbejde med beboere og håndtering af praktiske opgaver såsom vedligeholdelse, økonomi og kommunikation. Det har givet mig en konkret erfaring med ansvar, struktur og respektfuld dialog.
                     </p>
@@ -36,7 +36,7 @@ export default function Volunteer() {
 
 
                 <div className="bg-gray-50 border border-gray-200 rounded-md p-4">
-                    <h3 className="font-semibold text-[#e11d48] mb-2">Værdier og motivation</h3>
+                    <h3 className="font-semibold text-[var(--volunteer)] mb-2">Værdier og motivation</h3>
                     <p className="text-sm text-gray-700">
                         Det betyder meget for mig at bidrage til fællesskaber og tage ansvar dér, hvor jeg kan gøre en forskel – både professionelt og privat. Jeg tror på værdien af initiativ og fælles engagement og ser det som en styrke i samarbejdsorienterede og projektbaserede miljøer, som f.eks. softwareudvikling.
                         <br className="hidden sm:block" /> De værdier afspejles også i mit familieliv, hvor jeg sætter pris på nærvær, ansvar og støtte – kvaliteter, jeg naturligt bringer med mig i mit professionelle virke.

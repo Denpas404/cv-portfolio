@@ -20,10 +20,10 @@ export default function Education() {
 
     return (
         <section>
-            <h2 className="text-2xl font-bold text-[#0cc1ee] border-b border-[#0cc1ee] pb-2">Uddannelse & Kurser</h2>
+            <h2 className="text-2xl font-bold text-[var(--education)] border-b border-[var(--education)] pb-2">Uddannelse & Kurser</h2>
 
             {/* Igangværende sektion */}
-            <h3 className="font-semibold text-[#0cc1ee] mt-6">Igangværende forløb</h3>
+            <h3 className="font-semibold text-[var(--education)] mt-6">Igangværende forløb</h3>
             <ul className="ml-5 text-gray-800">
                 <li>
                     <p className="font-medium">Datatekniker med speciale i programmering</p>
@@ -60,7 +60,7 @@ export default function Education() {
             </ul>
 
             {/* Gennemførte sektion */}
-            <h3 className="font-semibold text-[#0cc1ee] mt-6">Gennemførte forløb</h3>
+            <h3 className="font-semibold text-[var(--education)] mt-6">Gennemførte forløb</h3>
             <ul className="ml-5 text-gray-800">
                 <li>
                     <p className="font-medium">Datatekniker med speciale i programmering</p>
@@ -97,7 +97,7 @@ export default function Education() {
             </ul>
 
             {/* Selvstudier & e-læring */}
-            <h3 className="font-semibold text-[#0cc1ee] mt-6 mb-4">Selvstudier & e-læring</h3>
+            <h3 className="font-semibold text-[var(--education)] mt-6 mb-4">Selvstudier & e-læring</h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {onlineCourses.map((course, index) => (
                     <div
@@ -111,7 +111,7 @@ export default function Education() {
             </div>
 
             {/* Øvrige kurser */}
-            <h3 className="font-semibold text-[#0cc1ee] mt-6 mb-4">Øvrige kurser</h3>
+            <h3 className="font-semibold text-[var(--education)] mt-6 mb-4">Øvrige kurser</h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {otherCourses.map((course, index) => (
                     <div
