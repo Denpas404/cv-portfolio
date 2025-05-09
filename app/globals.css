@@ -3,7 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --sidebar: #dddddd;
+  --sidebar: #cfcfcf;
+  --education: #0cc1ee;
 }
 
 @theme inline {

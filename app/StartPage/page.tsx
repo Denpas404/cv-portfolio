@@ -21,13 +21,13 @@ const tabData = [
 
 const getColorByTab = (color: string) => {
     switch (color) {
-        case "cyan": return "#06b6d4";
-        case "blue": return "#3b82f6";
-        case "violet": return "#7c3aed";
-        case "rose": return "#f43f5e";
-        case "amber": return "#f59e0b";
-        case "indigo": return "#6366f1";
-        default: return "#3b82f6";
+      case "cyan": return "#0891b2";     // mørkere end #06b6d4
+        case "blue": return "#2563eb";     // mørkere end #3b82f6
+        case "violet": return "#6d28d9";   // lidt dybere end #7c3aed
+        case "rose": return "#e11d48";     // mere mættet end #f43f5e
+        case "amber": return "#d97706";    // mindre neon, mere læsbar
+        case "indigo": return "#4f46e5";   // justeret fra #6366f1
+        default: return "#2563eb";
     }
 };
 

@@ -10,21 +10,27 @@ export default function Sidebar({ setActiveTab, color }: SidebarProps) {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 128 128"
                 className="mx-auto mb-5 w-[18ch] h-[18ch] rounded-full border-5 opacity-80 shadow-xl"
-                style={{ borderColor: color }}
+                style={{ borderColor: color, transition: 'border-color 600ms ease-in-out' }}
             >
                 <circle cx="64" cy="64" r="64" fill="transparent" stroke="black" strokeWidth="6" />
                 <circle cx="64" cy="48" r="20" fill="black" />
                 <path d="M32 104c0-18 64-18 64 0" fill="black" />
             </svg>
 
-            <h1 className="text-xl font-bold text-center" style={{ color }}>
+            <h1
+                className="text-xl font-bold text-center"
+                style={{ color, transition: 'color 600ms ease-in-out' }}
+            >
                 Dennis Paaske
             </h1>
             <p className="text-gray-700 mt-2">Datatekniker elev med speciale i programmering</p>
 
             {/* Contact Links */}
             <div className="mt-6">
-                <h2 className="text-lg font-semibold border-b pb-2" style={{ borderColor: color, borderBottomWidth: '2px' }}>
+                <h2
+                    className="text-lg font-semibold border-b pb-2"
+                    style={{ borderColor: color, borderBottomWidth: '2px', transition: 'border-color 600ms ease-in-out' }}
+                >
                     Kontakt
                 </h2>
                 <div className="mt-4 grid gap-3 justify-center">
@@ -34,13 +40,13 @@ export default function Sidebar({ setActiveTab, color }: SidebarProps) {
                                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.263.793-.582v-2.234c-3.338.726-4.033-1.61-4.033-1.61-.546-1.386-1.333-1.755-1.333-1.755-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.776.42-1.306.762-1.606-2.665-.304-5.466-1.334-5.466-5.93 0-1.31.468-2.382 1.235-3.22-.124-.304-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404c1.02.004 2.047.137 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.12 3.176.77.838 1.233 1.91 1.233 3.22 0 4.61-2.805 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.192.698.8.58C20.565 21.796 24 17.297 24 12c0-6.63-5.373-12-12-12z" />
                             </svg>
                         </div>
-                        <a href="https://github.com/Denpas404" className="hover:underline text-left pointer-events-auto" style={{ color }}>
+                        <a href="https://github.com/Denpas404" className="hover:underline text-left pointer-events-auto" style={{ color, transition: 'color 600ms ease-in-out' }}>
                             github.com/Denpas404
                         </a>
                     </div>
                     <div className="grid grid-cols-[1.5rem_auto] gap-3 items-center">
                         <div className="flex justify-center items-center text-xl">🌐</div>
-                        <a href="https://denpas404.github.io/" className="hover:underline text-left pointer-events-auto" style={{ color }}>denpas404.github.io</a>
+                        <a href="https://denpas404.github.io/" className="hover:underline text-left pointer-events-auto" style={{ color, transition: 'color 600ms ease-in-out' }}>denpas404.github.io</a>
                     </div>
                 </div>
             </div>
