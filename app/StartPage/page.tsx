@@ -9,6 +9,7 @@ import Education from "../components/tabs/Education";
 import Experience from "../components/tabs/Experience";
 import Volunteer from "../components/tabs/Volunteer";
 import About from "../components/tabs/About";
+import Portfolio from "../components/tabs/Portfolio";
 
 const tabData = [
     { value: "education", color: "cyan" },
@@ -51,7 +52,7 @@ export default function StartPage() {
             <Navbar setActiveTab={setActiveTab} />
 
             {/* Main wrapper */}
-            <div className="flex flex-col items-center w-full p-1 mt-6 mb-3 relative  ">
+            <div className="flex flex-col items-center w-full p-1 mt-6 mb-3 relative drop-shadow-2xl  ">
 
                 {/* Right-aligned column container */}
                 <div className="flex flex-col items-end relative max-w-6xl w-full ">
@@ -59,8 +60,18 @@ export default function StartPage() {
                     {/* Tabs and edge graphic container */}
                     <div className="flex flex-row items-stretch justify-end">
                         {/* Decorative SVG aligned to the left of the tab bar, matching its height */}
-                        <img src="/nav-edge.svg" alt="Tab Edge" className="w-auto block translate-x-0.5" style={{ height: `${tabHeight + 25}px` }}
-                        />
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 136 70"
+                            className="w-auto block translate-x-0.5"
+                            style={{ height: `${tabHeight + 25}px` }}
+                        >
+                            <path
+                                d="M64 48.3333C40.3125 70 0 70 0 70h135.5V0h-8.673C104.41 0 85.7045 15.5842 74.3306 34.9015 71.281 40.0808 67.8169 44.8421 64 48.3333z"
+                                fill="#fff"
+
+                            />
+                        </svg>
 
                         {/* Tab navigation container – height is tracked via ref */}
                         <div ref={tabContainerRef} className="bg-white px-8 rounded-tr-4xl flex items-center">
@@ -108,6 +119,12 @@ export default function StartPage() {
                                     {activeTab === "about" && (
                                         <motion.div key="about" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
                                             <About />
+                                        </motion.div>
+                                    )}
+
+                                    {activeTab === "portfolio" && (
+                                        <motion.div key="portfolio" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
+                                            <Portfolio />
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
