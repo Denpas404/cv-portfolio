@@ -78,7 +78,13 @@ export const completedForloeb = [
     },
     {
         title: "Praktikforløb 2 · 14. januar – 10. april 2023",
-        subjects: ["Fag F", "Fag G"]
+        subjects: [
+            "Intro til MVVM (WPF / C#)",
+            "Lav en ASP.net mvc hjemmeside",
+            `Projekt: TEC-ArduinoRFID-PI-PLC:
+            Projektet "TEC-ArduinoRFID-PI-PLC" er en praktisk anvendelse af IoT og automation i et simuleret produktionsmiljø, udviklet i samarbejde med automatikafdelingen. Målet er at kunne identificere og spore vogne (slæder) på et transportbånd i realtid.
+            `
+        ]
     },
     {
         title: "Hovedforløb 1 · 24. oktober 2022 – 13. januar 2023",
@@ -94,7 +100,13 @@ export const completedForloeb = [
     },
     {
         title: "Praktikforløb 1 · 25. april – 23. oktober 2022",
-        subjects: ["Fag 1", "Fag 2"]
+        subjects: [
+            "Intro til GIT",
+            "Lav en hjemmeside i HTML og bootstrap",
+            "Project \"ThreeCases\", lav 3 cases med class library og unit test.",
+            "Intro til SQL",
+            "Intro og opsætning af linux server",
+        ]
     }
 ];
 
