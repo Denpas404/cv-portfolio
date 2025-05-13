@@ -23,14 +23,7 @@ export default function Portfolio() {
 
         if (selectedProject) {
             document.body.style.overflow = "hidden";
-            setTimeout(() => {
-                const yOffset = -20;
-                const element = modalRef.current;
-                if (element) {
-                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
-                }
-            }, 50);
+            modalRef.current?.scrollIntoView({ behavior: 'smooth' });
             document.addEventListener('keydown', handleKeyDown);
         } else {
             document.body.style.overflow = "auto";
@@ -67,8 +60,8 @@ export default function Portfolio() {
 
             {/* Modal */}
             {selectedProject && (
-                <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-start pt-[20px] z-50" onClick={() => setSelectedProject(null)}>
-                    <div ref={modalRef} className="bg-white h-[90vh] w-[70vw] p-6 rounded-xl shadow-xl relative overflow-hidden" onClick={(e) => e.stopPropagation()}>
+                <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center z-50 " onClick={() => setSelectedProject(null)}>
+                    <div ref={modalRef} className="bg-white h-[90vh] w-[70vw] mt-15 p-6 rounded-xl shadow-xl relative overflow-hidden" onClick={(e) => e.stopPropagation()}>
                         <button
                             className="absolute top-3 right-4 text-gray-500 hover:text-gray-700 text-2xl"
                             onClick={() => setSelectedProject(null)}
