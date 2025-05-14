@@ -69,9 +69,14 @@ export default function StartPage() {
             ) : (
                 <>
                     <Navbar setActiveTab={setActiveTab} />
+
+                    {/* Main wrapper */}
                     <div className="flex flex-col items-center w-full p-1 mt-6 mb-3 relative drop-shadow-2xl">
+                        {/* Right-aligned column container */}
                         <div className="flex flex-col items-end relative max-w-6xl w-full">
+                            {/* Tabs and edge graphic container */}
                             <div className="flex flex-row items-stretch justify-end">
+                                {/* Decorative SVG aligned to the left of the tab bar, matching its height */}
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 136 70"
@@ -83,11 +88,12 @@ export default function StartPage() {
                                         fill="#fff"
                                     />
                                 </svg>
+
+                                {/* Tab navigation container – height is tracked via ref */}
                                 <div ref={tabContainerRef} className="bg-white px-8 rounded-tr-4xl flex items-center">
                                     <TabsNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
                                 </div>
                             </div>
-
                             {/* A4-lignende container */}
                             <div className="relative flex bg-white w-full max-w-7xl min-h-[90vh] shadow-lg rounded-tl-4xl rounded-bl-4xl rounded-br-4xl overflow-hidden">
                                 {/* Sidebar */}
@@ -145,14 +151,14 @@ function MobileLayout({ activeTab, setActiveTab }: { activeTab: string; setActiv
     return (
         <>
             {/* Øverste topbar */}
-            <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center h-14 px-4 border-b border-gray-200 bg-white/70 backdrop-blur-sm shadow-sm">
+            <div className="topbar fixed top-0 left-0 right-0 z-50 flex items-center justify-center h-14 px-4 border-b border-gray-200 bg-white/70 backdrop-blur-sm shadow-sm">
                 <h1 className="text-base font-semibold text-gray-800 text-center flex items-center gap-2">
                     Dennis Paaske – CV / Portfolio
                 </h1>
             </div>
 
             {/* Faneknapper i 2 rækker */}
-            <div className="fixed top-14 left-0 right-0 z-40 bg-white border-b border-gray-200 mt-[6px] mx-[6px] ">
+            <div className="tabbar fixed top-14 left-0 right-0 z-40 bg-white border-b border-gray-200 mt-[6px] mx-[6px] ">
                 <div className="grid grid-cols-3 w-full">
                     {tabData.map((tab) => {
                         const isActive = activeTab === tab.value;

@@ -19,17 +19,17 @@ export default function Education() {
     };
 
     return (
-        <section>
+        <section className="px-2 sm:px-4">
             <h2 className="text-2xl font-bold text-[var(--education)] border-b border-[var(--education)] pb-2">Uddannelse & Kurser</h2>
 
             {/* Igangværende sektion */}
             <h3 className="font-semibold text-[var(--education)] mt-6">Igangværende forløb</h3>
-            <ul className="ml-5 text-gray-800">
+            <ul className="text-gray-800">
                 <li>
-                    <p className="font-medium">Datatekniker med speciale i programmering</p>
-                    <ul className="ml-6 mt-2 space-y-2">
+                    <p className="font-medium ml-2 sm:ml-5">Datatekniker med speciale i programmering</p>
+                    <ul className="mt-2 space-y-2">
                         {ongoingSubjects.map((item, idx) => (
-                            <li key={idx}>
+                            <li key={idx} className="mx-2 sm:mx-6">
                                 <div className="bg-gray-50 my-4 px-4 py-2 rounded-md border border-gray-200">
                                     <div
                                         onClick={toggleOngoing}
@@ -61,12 +61,12 @@ export default function Education() {
 
             {/* Gennemførte sektion */}
             <h3 className="font-semibold text-[var(--education)] mt-6">Gennemførte forløb</h3>
-            <ul className="ml-5 text-gray-800">
+            <ul className="text-gray-800">
                 <li>
-                    <p className="font-medium">Datatekniker med speciale i programmering</p>
-                    <ul className="ml-6 mt-2 space-y-2">
+                    <p className="font-medium ml-2 sm:ml-5">Datatekniker med speciale i programmering</p>
+                    <ul className="mt-2 space-y-2">
                         {completedForloeb.map((item, index) => (
-                            <li key={index}>
+                            <li key={index} className="mx-2 sm:mx-6">
                                 <div className="bg-gray-50 my-4 px-4 py-2 rounded-md border border-gray-200">
                                     <div
                                         onClick={() => toggle(index)}
@@ -98,7 +98,7 @@ export default function Education() {
 
             {/* Selvstudier & e-læring */}
             <h3 className="font-semibold text-[var(--education)] mt-6 mb-4">Selvstudier & e-læring</h3>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {onlineCourses.map((course, index) => (
                     <div
                         key={index}
@@ -112,7 +112,7 @@ export default function Education() {
 
             {/* Øvrige kurser */}
             <h3 className="font-semibold text-[var(--education)] mt-6 mb-4">Øvrige kurser</h3>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {otherCourses.map((course, index) => (
                     <div
                         key={index}
