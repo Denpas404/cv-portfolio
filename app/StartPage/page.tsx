@@ -148,6 +148,19 @@ export default function StartPage() {
 }
 
 function MobileLayout({ activeTab, setActiveTab }: { activeTab: string; setActiveTab: (val: string) => void }) {
+
+    useEffect(() => {
+        // Vent til næste repaint (to gange) før scroll
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                });
+            });
+        });
+    }, [activeTab]);
+
     return (
         <>
             {/* Øverste topbar */}
