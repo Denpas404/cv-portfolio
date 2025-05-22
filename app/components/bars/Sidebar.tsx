@@ -25,15 +25,35 @@ export default function Sidebar({ setActiveTab, color }: SidebarProps) {
             </h1>
             <p className="font-medium text-gray-700 mt-2">Datatekniker elev med speciale i programmering</p>
 
-            {/* Contact Links */}
+            
             <div className="mt-6">
                 <h2
                     className="text-lg font-semibold border-b pb-2"
                     style={{ borderColor: color, borderBottomWidth: '2px', transition: 'border-color 600ms ease-in-out' }}
                 >
-                    Kontakt
+                
                 </h2>
                 <div className="mt-4 grid gap-3 justify-center">
+                    <div className="grid grid-cols-[1.5rem_auto] gap-3 items-center">
+                        <div className="flex justify-center items-center text-xl">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-5 h-5 text-black"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
+                            </svg>
+                        </div>
+                        <a
+                            href="https://denpas404.github.io/"
+                            className="font-semibold hover:underline text-left pointer-events-auto"
+                            style={{ color, transition: 'color 600ms ease-in-out' }}
+                        >
+                            København S
+                        </a>
+                    </div>
+
                     <div className="grid grid-cols-[1.5rem_auto] gap-3 items-center">
                         <div className="flex justify-center items-center">
                             <svg className="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24">

@@ -1,4 +1,5 @@
-import { skills } from "./data/aboutData";
+import { aboutMe, skills } from "./data/aboutData";
+
 
 
 export default function About() {
@@ -12,18 +13,14 @@ export default function About() {
             <div className="space-y-6 mt-4">
                 <div className="bg-gray-50 border border-gray-200 rounded-md p-4 space-y-4">
                     <h3 className="text-xl font-semibold text-[var(--about)] mb-2">Baggrund & Motivation</h3>
-                    <p>
-                        Jeg er i gang med at uddanne mig som datatekniker med speciale i programmering og har allerede opnået solid erfaring med softwareudvikling, databaser og IT-infrastruktur gennem både skoleforløb og praktik.
-                    </p>
-                    <p>
-                        Jeg har en stor passion for programmering og teknologisk problemløsning. Jeg nyder at dykke ned i komplekse udfordringer og omsætte dem til brugbare, effektive løsninger gennem kode.
-                    </p>
-                    <p>
-                        Under min uddannelse har jeg arbejdet med udvikling af apps, websystemer og databaser. Det har givet mig en praktisk og alsidig forståelse for it-systemer i praksis.
-                    </p>
-                    <p>
-                        Jeg brænder for at skabe løsninger, der er både funktionelle og brugervenlige – og jeg er altid nysgerrig på nye teknologier, værktøjer og metoder. Uanset om jeg arbejder med frontend, backend eller IoT-projekter, motiveres jeg af at lære og bygge løsninger, der skaber reel værdi.
-                    </p>
+                    {aboutMe.map((item, index) => (
+                        <p
+                            key={index}
+                            className="text-gray-700"
+                            dangerouslySetInnerHTML={{ __html: item.text }}
+                        ></p>
+                    ))}
+
                 </div>
 
                 {/* Hvad har jeg arbejdet med gennem uddannelsen? */}

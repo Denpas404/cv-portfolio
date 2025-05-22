@@ -47,7 +47,7 @@ function useIsMobile() {
 }
 
 export default function StartPage() {
-    const [activeTab, setActiveTab] = useState("education");
+    const [activeTab, setActiveTab] = useState("about");
     const tabContainerRef = useRef<HTMLDivElement | null>(null);
     const [tabHeight, setTabHeight] = useState(0);
     const isMobile = useIsMobile();
