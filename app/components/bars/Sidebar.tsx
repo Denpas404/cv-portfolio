@@ -1,9 +1,14 @@
+import { useState } from "react";
+import ContactModal from "../modals/ContactModal";
+
 interface SidebarProps {
     setActiveTab: (tab: string) => void;
     color: string;
 }
 
 export default function Sidebar({ setActiveTab, color }: SidebarProps) {
+    const [contactOpen, setContactOpen] = useState(false);
+
     return (
         <aside className="w-full bg-[var(--sidebar)] p-6 rounded-l-lg text-center">
             <svg
@@ -25,14 +30,11 @@ export default function Sidebar({ setActiveTab, color }: SidebarProps) {
             </h1>
             <p className="font-medium text-gray-700 mt-2">Datatekniker elev med speciale i programmering</p>
 
-            
             <div className="mt-6">
                 <h2
                     className="text-lg font-semibold border-b pb-2"
                     style={{ borderColor: color, borderBottomWidth: '2px', transition: 'border-color 600ms ease-in-out' }}
-                >
-                
-                </h2>
+                ></h2>
                 <div className="mt-4 grid gap-3 justify-center">
                     <div className="grid grid-cols-[1.5rem_auto] gap-3 items-center">
                         <div className="flex justify-center items-center text-xl">
@@ -64,9 +66,17 @@ export default function Sidebar({ setActiveTab, color }: SidebarProps) {
                             github.com/Denpas404
                         </a>
                     </div>
+
                     <div className="grid grid-cols-[1.5rem_auto] gap-3 items-center">
                         <div className="flex justify-center items-center text-xl">🌐</div>
-                        <a href="https://denpas404.github.io/" className="font-semibold hover:underline text-left pointer-events-auto" style={{ color, transition: 'color 600ms ease-in-out' }}>denpas404.github.io</a>
+                        <button
+                            onClick={() => setContactOpen(true)}
+                            className="font-semibold hover:underline text-left pointer-events-auto"
+                            style={{ color, transition: 'color 600ms ease-in-out' }}
+                        >
+                            Kontakt mig
+                        </button>
+                        <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
                     </div>
                 </div>
             </div>

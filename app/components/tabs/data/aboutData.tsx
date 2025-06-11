@@ -16,7 +16,7 @@ export const skills = [
     },
     {
         title: "IoT & Embedded",
-        description: "Udvikling med ESP32, sensorer og datakommunikation via MQTT.",
+        description: "Udvikling med ESP32 og Raspberry pi, sensorer og datakommunikation via MQTT.",
         icon: "📡"
     }
 ];

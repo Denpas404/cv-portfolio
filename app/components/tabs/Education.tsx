@@ -97,7 +97,7 @@ export default function Education() {
             </ul>
 
             {/* Selvstudier & e-læring */}
-            <h3 className="font-semibold text-[var(--education)] mt-6 mb-4">Selvstudier & e-læring</h3>
+            <h3 className="font-semibold text-[var(--education)] mt-6 mb-4">Selvstudier & online kurser</h3>
             <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {onlineCourses.map((course, index) => (
                     <div
