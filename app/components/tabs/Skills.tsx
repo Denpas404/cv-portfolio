@@ -1,38 +1,63 @@
-import { programmingLanguages, frameworks, toolsAndTech } from "./data/skillsData";
+import { useState } from "react";
+import { blocks } from "./data/skillsData";
 
 export default function Skills() {
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    const toggle = (i: number) => {
+        setOpenIndex(openIndex === i ? null : i);
+    };
+
     return (
-        <section>
-            <h2 className="text-2xl font-bold text-[var(--skills)] border-b border-[var(--skills)] pb-2">Teknologier & Kompetencer</h2>
+        <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl font-bold text-[var(--skills)] border-b border-[var(--skills)] pb-2 ">
+                Min Udviklingsstack
+            </h2>
 
-            <div className="space-y-6 mt-4">
-                <div className="bg-gray-50 border border-gray-200 rounded-md p-4">
-                    <h3 className="font-semibold text-[var(--skills)] mb-2">Programmeringssprog</h3>
-                    <ul className="mt-1 grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm text-gray-700 list-disc list-inside ml-4">
-                        {programmingLanguages.map((lang, idx) => (
-                            <li key={idx}>{lang}</li>
-                        ))}
-                    </ul>
-                </div>
+            {blocks.map((block, index) => (
+                <div key={index} className=" rounded-2xl border border-gray-300 mt-6 p-4">
+                    <button
+                        onClick={() => toggle(index)}
+                        className="w-full flex justify-between items-center text-left font-semibold text-lg text-[var(--skills)] hover:text-[var(--skills-hover)] focus:outline-none"
+                    >
+                        <span>{block.title}</span>
+                        <svg
+                            className={`w-5 h-5 ml-2 transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                                }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+                    </button>
 
-                <div className="bg-gray-50 border border-gray-200 rounded-md p-4">
-                    <h3 className="font-semibold text-[var(--skills)] mb-2">Frameworks</h3>
-                    <ul className="mt-1 grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm text-gray-700 list-disc list-inside ml-4">
-                        {frameworks.map((fw, idx) => (
-                            <li key={idx}>{fw}</li>
-                        ))}
-                    </ul>
+                    {openIndex === index && (
+                        <>
+                            {block.description && (
+                                <p className="text-sm text-gray-500 mt-2 mb-3">
+                                    {block.description}
+                                </p>
+                            )}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                                {block.items.map((item, i) => (
+                                    <div
+                                        key={i}
+                                        className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm hover:bg-blue-50 hover:border-blue-300 transition transform hover:scale-[1.015]"
+                                    >
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
+                        </>
+                    )}
                 </div>
-
-                <div className="bg-gray-50 border border-gray-200 rounded-md p-4">
-                    <h3 className="font-semibold text-[var(--skills)] mb-2">Teknologi & Software</h3>
-                    <ul className="mt-1 grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm text-gray-700 list-disc list-inside ml-4">
-                        {toolsAndTech.map((tool, idx) => (
-                            <li key={idx}>{tool}</li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </section>
+            ))}
+        </div>
     );
 }

@@ -12,7 +12,7 @@ interface TabsNavigationProps {
 const tabData = [
     { value: "about", label: "Om mig", color: "amber" },
     { value: "education", label: "Uddannelse", color: "cyan" },
-    { value: "skills", label: "Teknologier", color: "blue" },
+    { value: "skills", label: "Udviklingsstack", color: "blue" },
     { value: "experience", label: "Erhvervserfaring", color: "violet" },
     { value: "volunteer", label: "Fritid & Frivilligt", color: "rose" },
     { value: "portfolio", label: "Portfolio", color: "indigo" },

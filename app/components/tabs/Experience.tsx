@@ -33,6 +33,9 @@ export default function Experience() {
                         Jeg har desuden arbejdet med at gennemgå og kontrollere pakker, der skulle sendes til udlandet, for at sikre at de ikke indeholdt ulovlige eller forbudte genstande. Det krævede grundighed, integritet og opmærksomhed på detaljer – kvaliteter jeg også bringer med mig i softwareudvikling, særligt ved test og dokumentation.
                     </p>
                 </div>
+
+                
+                
             </div>
         </section>
     );
