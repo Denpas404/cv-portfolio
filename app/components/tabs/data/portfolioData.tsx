@@ -10,11 +10,18 @@ Praktikforløb 3 projekt:
 - Teknologier: Angular frontend, ASP.NET Core API og MSSQL database
 - Arbejdet inkluderede projektidé, OOAD-analyse, SWOT, samt Gantt-planlægning
 - Projektet blev udført som gruppearbejde med fokus på samarbejde og fælles ansvar`,
-        image: "/images/portfolio/mealplanner.png"
+        image: "/images/portfolio/mealplanner.png",
+        technologies: [
+            { name: "Angular", type: "Framework" },
+            { name: "ASP.NET Core", type: "Framework" },
+            { name: "C#", type: "Language" },
+            { name: "MSSQL", type: "Database" },
+            { name: "Entity Framework", type: "Library" }
+        ]
     },
     {
         title: "TEC-ArduinoRFID-PI-PLC",
-        shortDescription: "Et IoT- og automationsprojekt udviklet i samarbejde med automatikafdelingen. Systemet bruger Arduino og RFID-læsere til at identificere slæder på et transportbånd. Data sendes trådløst til en Raspberry Pi, som videresender informationen til en PLC, der styrer transportbåndets funktion. Projektet er designet med mulighed for opskalering og omfatter op til fire skanningsstationer.",
+        shortDescription: "IoT-løsning med Arduino og RFID til identifikation på transportbånd, integreret med Raspberry Pi og PLC.",
         longDescription: `Projektet "TEC-ArduinoRFID-PI-PLC" er en praktisk anvendelse af IoT og automation i et simuleret produktionsmiljø, udviklet i samarbejde med automatikafdelingen. Målet er at kunne identificere og spore vogne (slæder) på et transportbånd i realtid.
 
 Hver vogn er udstyret med et unikt RFID-kort, og der er placeret stationære RFID-læsere langs båndet, forbundet til Arduino-enheder. Når en vogn passerer en læser, aflæses kortet, og data sendes trådløst via ESP8266 WiFi-modul til en Raspberry Pi, som herefter videresender informationen til en PLC (Programmerbar Logik Controller). PLC’en er ansvarlig for styringen af transportbåndets logik og handlinger.
@@ -37,7 +44,16 @@ Funktionelle fordele:
 -Mulighed for udvidelse med flere stationer
 
 Projektet illustrerer, hvordan man med lavpris hardware og netværkskommunikation kan opbygge et skalerbart og professionelt sporingssystem til undervisning eller let industriel brug.`,
-        image: "/images/portfolio/p2Projekt.png"
+        image: "/images/portfolio/p2Projekt.png",
+        technologies: [
+            { name: "C++", type: "Language" },
+            { name: "Python", type: "Language" },
+            { name: "Arduino", type: "Hardware" },
+            { name: "RFID", type: "Hardware" },
+            { name: "ESP8266", type: "Hardware" },
+            { name: "Raspberry Pi", type: "Hardware" },
+            { name: "PLC", type: "Tool" }
+        ]
     },
     {
         title: "CV-portfolio",
@@ -54,7 +70,14 @@ Applikationen er bygget med React og Tailwind CSS og tilbyder en moderne, respon
 - Portfolio med detaljerede projekter
 
 Projektet giver mulighed for nem vedligeholdelse og udvidelse, og fungerer som en dynamisk og præsentabel erstatning for det traditionelle CV.`,
-        image: "/images/portfolio/cvPortfolio.png"
+        image: "/images/portfolio/cvPortfolio.png",
+        technologies: [
+            { name: "Next.js", type: "Framework" },
+            { name: "TypeScript", type: "Language" },
+            { name: "Tailwind CSS", type: "Library" },
+            { name: "Framer Motion", type: "Library" },
+
+        ]
     },
     {
         title: "H3-projekt - Projektmanager",
@@ -69,7 +92,15 @@ Projektets backend håndterer forretningslogik, datavalidering og RESTful endpoi
 -Brugen af moderne webteknologier i samspil
 -Integration af en database via ORM (Entity Framework)
 -God softwarepraksis gennem enhedstest`,
-        image: "/images/portfolio/projectManager.png"
+        image: "/images/portfolio/projectManager.png",
+        technologies: [
+            { name: "Angular", type: "Framework" },
+            { name: "ASP.NET Core", type: "Framework" },
+            { name: "Entity Framework", type: "Library" },
+            { name: "C#", type: "Language" },
+            { name: "MSSQL", type: "Database" },
+            { name: "Unit Testing", type: "Tool" }
+        ]
     },
     {
         title: "MilkySip - H4-projekt",
@@ -85,7 +116,12 @@ Funktioner:
 -Enkelt design
 
 Appen kan med tiden udvides med flere funktioner. F.eks. vægtregistrering.`,
-        image: "/images/portfolio/milkySip.png"
+        image: "/images/portfolio/milkySip.png",
+        technologies: [
+            { name: "Android Studio", type: "Tool" },
+            { name: "Java", type: "Language" },
+            { name: "SQLite", type: "Database" }
+        ]
     },
     {
         title: "TEC Energy",
@@ -101,7 +137,20 @@ Funktioner:
 -Visualisering på hjemmeside via dashboard
 
 -Tidligere versioner med ESP32 og Pi`,
-        image: "/images/portfolio/tecEnergy.png"
+        image: "/images/portfolio/tecEnergy.png",
+        technologies: [
+            { name: "Angular", type: "Framework" },
+            { name: "ASP.NET Core", type: "Framework" },
+            { name: "TypeScript", type: "Language" },
+            { name: "C#", type: "Language" },
+            { name: "C++", type: "Language" },
+            { name: "ESP32", type: "Hardware" },
+            { name: "Raspberry Pi", type: "Hardware" },
+            { name: "InfluxDB", type: "Database" },
+            { name: "Grafana", type: "Tool" },
+            { name: "IoT", type: "Other" },
+
+        ]
     },
     {
         title: "Mit TEC Forløb",
@@ -124,6 +173,15 @@ Funktioner:
 
 Projektet er målrettet elever og undervisere på TEC og bidrager til digitalisering og struktur i skoleforløb.`,
         image: "/images/portfolio/mitTecForloeb.png",
+        technologies: [
+            { name: "C#", type: "Language" },
+            { name: "Blazor WebAssembly", type: "Framework" },
+            { name: "ASP.NET Core", type: "Framework" },
+            { name: "MSSQL", type: "Database" },
+            { name: "Entity Framework", type: "Library" },
+            { name: "PWA", type: "Tool" },
+            { name: "Identity", type: "Tool" }
+        ]
 
     }
 ];
