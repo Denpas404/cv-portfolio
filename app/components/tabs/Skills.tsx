@@ -15,7 +15,7 @@ export default function Skills() {
             </h2>
 
             {blocks.map((block, index) => (
-                <div key={index} className=" rounded-2xl border border-gray-300 mt-6 p-4">
+                <div key={index} className=" rounded-2xl shadow border border-gray-100 mt-6 p-4">
                     <button
                         onClick={() => toggle(index)}
                         className="w-full flex justify-between items-center text-left font-semibold text-lg text-[var(--skills)] hover:text-[var(--skills-hover)] focus:outline-none"
