@@ -6,7 +6,7 @@ interface SidebarProps {
     color: string;
 }
 
-export default function Sidebar({ setActiveTab, color }: SidebarProps) {
+export default function Sidebar({ color }: SidebarProps) {
     const [contactOpen, setContactOpen] = useState(false);
 
     return (
