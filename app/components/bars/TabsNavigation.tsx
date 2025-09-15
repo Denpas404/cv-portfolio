@@ -61,7 +61,7 @@ const TabsNavigation: React.FC<TabsNavigationProps> = ({ activeTab, setActiveTab
                             value={tab.value}
                             onClick={() => setActiveTab(tab.value)}
                             ref={(el) => { tabsRef.current[index] = el; }}
-                            className="relative px-1 py-2 text-gray-500 font-semibold transition-all duration-300 hover:opacity-80 data-[state=active]:opacity-100 cursor-pointer"
+                            className="relative px-1 text-gray-500 font-semibold transition-all duration-300 hover:opacity-80 data-[state=active]:opacity-100 cursor-pointer"
                             style={{
                                 color: activeTab === tab.value ? getColorByTab(tab.color) : undefined,
                                 textShadow: activeTab === tab.value

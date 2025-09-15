@@ -7,10 +7,14 @@ import { projects } from "./data/portfolioData";
 type Project = {
     title: string;
     shortDescription: string;
-    longDescription: string;
+    longDescription: {
+        intro: string;
+        bullets: string[];
+    };
     image: string;
-    technologies?: { name: string; type: string }[];
+    technologies: { name: string; type: string }[];
 };
+
 
 export default function Portfolio() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -25,7 +29,7 @@ export default function Portfolio() {
 
         if (selectedProject) {
             document.body.style.overflow = "hidden";
-            document.body.classList.add("modal-open");            
+            document.body.classList.add("modal-open");
 
             if (modalRef.current) {
                 const rect = modalRef.current.getBoundingClientRect();
@@ -41,12 +45,12 @@ export default function Portfolio() {
             document.addEventListener('keydown', handleKeyDown);
         } else {
             document.body.style.overflow = "auto";
-            document.body.classList.remove("modal-open"); 
+            document.body.classList.remove("modal-open");
         }
 
         return () => {
             document.body.style.overflow = "auto";
-            document.body.classList.remove("modal-open"); 
+            document.body.classList.remove("modal-open");
             document.removeEventListener('keydown', handleKeyDown);
         };
     }, [selectedProject]);
@@ -78,7 +82,7 @@ export default function Portfolio() {
                         >
                             <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-lg mb-4" />
                             <h4 className="font-semibold text-lg text-gray-800">{project.title}</h4>
-                            <p className="text-gray-600 text-sm mt-2">{project.shortDescription}</p>
+                            <p className="text-gray-600 text-sm mt-2 min-h-[100px]">{project.shortDescription}</p>
                             {project.technologies && (
                                 <div className="flex flex-wrap justify-center gap-1 mt-3">
                                     {project.technologies.map((tech, i) => (
@@ -103,10 +107,11 @@ export default function Portfolio() {
                 >
                     <div
                         ref={modalRef}
-                        className="bg-white w-full max-w-md sm:max-w-2xl rounded-xl shadow-xl overflow-hidden relative"
+                        className="bg-gray-50 w-full max-w-md sm:max-w-2xl rounded-2xl shadow-2xl overflow-hidden relative border border-gray-200"
                         onClick={(e) => e.stopPropagation()}
                         style={{ maxHeight: '90vh' }}
                     >
+                        {/* Luk knap */}
                         <button
                             className="absolute top-3 right-4 text-gray-500 hover:text-gray-700 text-2xl"
                             onClick={() => setSelectedProject(null)}
@@ -114,20 +119,51 @@ export default function Portfolio() {
                         >
                             ×
                         </button>
+
+                        {/* Titel */}
                         <div className="px-4 pt-6 pb-2 sm:px-6">
-                            <h3 className="text-lg sm:text-xl font-bold text-gray-800">{selectedProject.title}</h3>
+                            <h3 className="text-lg sm:text-xl font-bold text-gray-800 text-center">
+                                {selectedProject.title}
+                            </h3>
                         </div>
+
+                        {/* Billede */}
                         <img
                             src={selectedProject.image}
                             alt={selectedProject.title}
-                            className="w-full h-48 sm:h-64 object-cover"
+                            className="w-full h-48 sm:h-64 object-cover rounded-xl px-4"
                         />
-                        <div className="p-4 sm:p-6 overflow-y-auto max-h-[45vh] text-sm sm:text-base text-gray-600 leading-relaxed whitespace-pre-line scroll-smooth scrollbar-hide hover:scrollbar-default">
-                            {selectedProject.longDescription}
+
+                        {/* Beskrivelse opdelt i afsnit + bullets */}
+                        <div className="p-4 sm:p-6 overflow-y-auto max-h-[45vh] text-sm sm:text-base text-gray-700 leading-relaxed scroll-smooth">
+                            <p className="my-8">{selectedProject.longDescription.intro}</p>
+                            <ul className="list-disc list-outside pl-6 space-y-2">
+                                {selectedProject.longDescription.bullets.map((item, idx) => (
+                                    <li key={idx}>{item}</li>
+                                ))}
+                            </ul>
                         </div>
+
+                        {/* Teknologi-pills */}
+                        {selectedProject.technologies && (
+                            <div className="px-4 pb-6 sm:px-6 flex flex-wrap justify-center gap-2 mt-2">
+                                {selectedProject.technologies.map((tech, i) => (
+                                    <span
+                                        key={i}
+                                        className={`px-2 py-1 text-xs shadow-sm rounded-full font-medium ${getColor(
+                                            tech.type
+                                        )}`}
+                                    >
+                                        {tech.name}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             )}
+
+
         </section>
     );
 }

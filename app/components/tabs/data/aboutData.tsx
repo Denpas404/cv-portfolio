@@ -23,7 +23,7 @@ export const skills = [
 
 export const aboutMe = [
     {
-        text: 'Jeg er i gang med at uddanne mig som datatekniker med speciale i programmering – eller sagt på en anden måde: en kommende fullstack-udvikler. Undervejs har jeg allerede fået god erfaring med både softwareudvikling, databaser og IT, både fra skole og praktik.'
+        text: 'Jeg er i gang med at uddanne mig til systemudvikler gennem datateknikeruddannelsen med speciale i programmering. Undervejs har jeg opbygget solid erfaring med softwareudvikling, databaser og IT-systemer – både i skoleprojekter og i min skoleoplæring (SOP), der fungerer som en praksisnær erstatning for virksomhedspraktik.'
     },
     {
         text: 'Jeg kan godt lide at dykke ned i tekniske udfordringer og få dem til at give mening. Det er især fedt, når jeg selv har været med hele vejen og kan se, at det virker i praksis.'

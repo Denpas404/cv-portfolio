@@ -103,7 +103,7 @@ export default function StartPage() {
 
                                 {/* Indhold */}
                                 <div className="relative w-3/4 p-4">
-                                    <div className="p-4 mt-1">
+                                    <div className="p-1 mt-0">
                                         <AnimatePresence mode="wait">
                                             {activeTab === "education" && (
                                                 <motion.div key="education" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}>
